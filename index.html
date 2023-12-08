@@ -77,6 +77,23 @@
             background-color:  rgba(255, 255, 255, 0.4) ;
         }
 
+        .big-button {
+            font-size: 20px; /* 大一点的字体大小 */
+            padding: 15px 30px; /* 更大的填充空间，第一个值是上下，第二个值是左右 */
+            border: none; /* 无边框 */
+            border-radius: 5px; /* 边角圆滑 */
+            cursor: pointer; /* 鼠标悬停时显示指针手势 */
+            margin: 10px; /* 与其他元素的间隔 */
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* 轻微的阴影效果 */
+            background-color: red; /* 背景颜色为红色 */
+            color: white; /* 文本颜色为白色，确保文字能看见 */
+        }
+        
+        /* 可以为按钮添加悬停效果以提高互动性 */
+        .big-button:hover {
+            background-color: #f2f2f2; /* 鼠标悬停时的背景颜色 */
+        }
+
     </style>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -194,9 +211,29 @@
     <hr id='testing'>
 
       <div style="text-align:center;">
-              <h2 style=" display: inline-block; color: black; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Testing</h2>
-              <p style="text-align: left;padding: 0px 30px; font-size: 18px;">❗️❗️❗️❗️❗️v记得加图片？maybe加一个gif？Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem nulla, consectetur at leo vel, pretium bibendum nisl. Cras blandit quam a enim ultrices, eu convallis enim posuere. Donec eleifend enim sed purus consectetur, vitae cursus lectus varius. Vivamus consectetur felis nec est venenatis posuere. Phasellus vitae aliquet erat. In laoreet lacinia mollis. Quisque iaculis nisl fermentum pharetra lobortis. Donec rhoncus dui sem, ac molestie leo tristique vel. Phasellus in nibh feugiat, fringilla lectus in, elementum magna. Etiam quis dui condimentum, tempus ex in, dapibus est. Cras ut congue augue. Donec ac enim ex. Ut id tristique risus, vel porttitor quam. Sed ultricies enim eu nibh porttitor, vel sodales enim feugiat. Fusce volutpat venenatis magna ac ultrices. Curabitur eget urna ut nulla mattis convallis non eu diam.</p>
+        <h2 style=" display: inline-block; color: black; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Testing</h2>
+        <p style="text-align: left;padding: 0px 30px; font-size: 18px;">Here is a testing demo. You can press the button to see briefly how the game is played.</p>
+        
+        <!-- Interactive buttons -->
+        <button class="big-button" onclick="showEasy()">Easy</button>
+        <button class="big-button" onclick="showHard()">Hard</button>
+      
+        <br>
+        <!-- Placeholder for the GIF -->
+        <img id="gifPlaceholder" class="img-rounded" src="pics/1.gif" alt="Generic placeholder image" width="400" height="300">
       </div>
+      
+      <script>
+        // JavaScript functions to change the GIF source
+        function showEasy() {
+          document.getElementById('gifPlaceholder').src = "pics/1.gif";
+        }
+        
+        function showHard() {
+          document.getElementById('gifPlaceholder').src = "pics/2.gif";
+        }
+      </script>
+      
 
     <hr id='result'>
 
